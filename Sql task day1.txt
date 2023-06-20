@@ -1,0 +1,66 @@
+SQL PROGRAM:-
+1)create,insert,select:
+	CREATE TABLE students (id int,name varchar(30),class varchar(10));
+ 	insert into students values(1,'Arjun','CSE A');
+	insert into students values(2,'Dinesh','ECE A');
+	insert into students values(3,'Dhiyanesh','IT');
+	insert into students values(4,'Bharathan','AIDS');
+	select * from students;
+  OUTPUT:
+	1|Arjun|CSE A
+	2|Dinesh|ECE A
+	3|Dhiyanesh|IT
+	4|Bharathan|AIDS
+
+2)alter,update:
+	CREATE TABLE students (id int,name varchar(30),class varchar(10));
+	insert into students values(1,'Arjun','CSE A');
+	insert into students values(2,'Dinesh','ECE A');
+	insert into students values(3,'Dhiyanesh','IT');
+	insert into students values(4,'Bharathan','AIDS');
+	select * from students;
+	alter TABLE students add domain varchar(10);
+	update students set domain='Fullstack' where name='Arjun';
+	update students set domain='AI' where id=2;
+	update students set domain='Cloud Computing' where class='IT';
+	update students set domain='MERN-stack' where name='Dinesh';
+	select * from students;
+  OUTPUT:
+	1|Arjun|CSE A
+	2|Dinesh|ECE A
+	3|Dhiyanesh|IT
+	4|Bharathan|AIDS
+	1|Arjun|CSE A|Fullstack
+	2|Dinesh|ECE A|MERN-stack
+	3|Dhiyanesh|IT|Cloud Computing
+	4|Bharathan|AIDS|
+
+create table student(id int ,name varchar, age int, gender varchar(5),course varchar(20));
+insert into student values(1 , 'Dharmik', 20 ,' m ',' cse  ');
+insert into student values(2 , 'Arjun', 20 ,' m ',' cse  ');
+insert into student values(3 , 'Dinesh', 19 ,' m ',' mech ');
+insert into student values(4 , ' Dhiyanesh ', 17 ,' m ',' eee  ');
+insert into student values(5 , ' Magilesh    ', 20 ,' m ',' aids ');
+insert into student values(6 , 'Jaga', 19 ,' m ',' ece  ');
+output:
+1| Dharmik |20| m | cse  |90|
+2| Arjun     |20| m | cse  |99|
+3| Dinesh    |19| m | mech |88|
+4| Dhiyanesh |17| m | eee  |94|
+5| Magilesh   |20| m | aids |95|
+6| Jaga      |19| m | ece  |80|
+
+
+-- update
+alter table student
+add stu_id  int;
+update student set stu_id=21028 where id=1;
+update student set stu_id=21043 where id=4;
+output:
+1| Dharmik|20| m | cse  |90|21028
+2| Arjun|20| m | cse  |99|
+3| Dinesh|19| m | mech |88|
+4| Dhiyanesh|17| m | eee  |94|21043
+5| Magilesh|20| m | aids |95|
+6| Jaga|19| m | ece  |80|
+
